@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sadiya Siddiqui | Full-Stack Developer</title>
+<meta name="description" content="Portfolio of Sadiya Siddiqui, B.Tech CSE student building Python and MERN stack projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0f0b1d;--bg2:#171230;--ink:#ece8ff;--mute:#a59fc8;--rose:#ff7aa2;--lav:#b6a2ff;--line:#2c2551;color-scheme:dark;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 "DM Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.05;margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:14px 5vw;background:rgba(15,11,29,.7);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.1rem}
+nav div{display:flex;gap:22px;font-size:.95rem}
+nav a{text-decoration:none;color:var(--mute);transition:color .2s}
+nav a:hover{color:var(--rose)}
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:110px 5vw 60px}
+#sky{position:absolute;inset:0;width:100%;height:100%}
+.hero-in{position:relative;max-width:900px}
+.hi{color:var(--lav);margin:0 0 14px}
+.name{font-size:clamp(3rem,11vw,7.5rem);font-weight:800;letter-spacing:-.03em}
+.name span{display:inline-block;opacity:0;transform:translateY(60%) rotate(6deg);animation:pop .8s cubic-bezier(.2,.9,.3,1.2) forwards}
+@keyframes pop{to{opacity:1;transform:none}}
+.role{font-size:clamp(1.1rem,2.6vw,1.6rem);margin:22px 0 8px;color:var(--rose);min-height:1.6em}
+.role::after{content:"";display:inline-block;width:2px;height:1.1em;background:var(--rose);margin-left:4px;vertical-align:-3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{max-width:56ch;color:var(--mute)}
+.btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.btn{padding:13px 24px;border-radius:999px;text-decoration:none;font-weight:500;border:1px solid var(--line);transition:transform .2s,background .2s}
+.btn.main{background:linear-gradient(120deg,var(--rose),var(--lav));color:#1a1030;border:0}
+.btn:hover{transform:translateY(-3px)}
+section{padding:90px 5vw;max-width:1100px;margin:0 auto}
+h2{font-size:clamp(2rem,5vw,3.2rem);margin-bottom:34px}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:start}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:20px}
+.stat b{display:block;font:800 2.2rem "Bricolage Grotesque",sans-serif;color:var(--lav)}
+.stat span{color:var(--mute);font-size:.9rem}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.sk{border-left:3px solid var(--rose);padding:4px 0 4px 18px}
+.sk h3{font-size:1.15rem;margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips i{font-style:normal;font-size:.88rem;padding:5px 12px;border-radius:999px;background:var(--bg2);border:1px solid var(--line);transition:border-color .2s,transform .2s}
+.chips i:hover{border-color:var(--lav);transform:translateY(-2px)}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.card{position:relative;background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:28px;transition:transform .25s,border-color .25s,box-shadow .25s;overflow:hidden}
+.card:hover{transform:translateY(-6px);border-color:var(--rose);box-shadow:0 18px 40px -18px rgba(255,122,162,.45)}
+.card h3{font-size:1.4rem;margin-bottom:6px}
+.card.wide{grid-column:1/-1;border-color:#3b2f6e;background:linear-gradient(135deg,#1c1640,var(--bg2))}.card.wide ul{margin:0 0 14px;padding-left:20px;color:var(--mute);font-size:.98rem}.card.wide li{margin-bottom:6px}.tag{display:inline-block;font-size:.8rem;color:#1a1030;background:linear-gradient(120deg,var(--rose),var(--lav));padding:2px 12px;border-radius:999px;margin-bottom:12px;font-weight:500}.date{color:var(--lav);font-size:.88rem;margin:0 0 12px}
+.card p{color:var(--mute);margin:0 0 14px;font-size:.98rem}
+.card .chips i{font-size:.8rem;padding:3px 10px}
+.live{display:inline-block;margin-top:16px;color:var(--rose);font-weight:500;text-decoration:none;border-bottom:1px solid currentColor}
+.badge{display:inline-block;margin-top:16px;color:var(--mute);font-size:.88rem}
+.tl{border-left:2px solid var(--line);margin-left:6px;padding-left:28px}
+.tl div{position:relative;margin-bottom:30px}
+.tl div::before{content:"";position:absolute;left:-37px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--rose)}
+.tl h3{font-size:1.2rem}
+.tl p{margin:2px 0;color:var(--mute)}
+.tl .when{color:var(--lav);font-size:.9rem}
+.contact{text-align:center}
+.contact p{max-width:48ch;margin:0 auto 30px;color:var(--mute)}
+.links{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+footer{text-align:center;padding:30px 5vw 50px;color:var(--mute);font-size:.9rem;border-top:1px solid var(--line)}
+.hero{overflow:hidden}.live+.live{margin-left:18px}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--rose),var(--lav));z-index:9}
+.orb{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;pointer-events:none;animation:float 14s ease-in-out infinite alternate}
+.o1{width:340px;height:340px;background:var(--rose);top:8%;right:6%}
+.o2{width:300px;height:300px;background:#6a4cff;bottom:4%;left:-4%;animation-delay:-6s}
+@keyframes float{to{transform:translate(-40px,50px) scale(1.15)}}
+.mq{overflow:hidden;border-block:1px solid var(--line);background:var(--bg2);padding:14px 0;white-space:nowrap}
+.mq div{display:inline-block;animation:slide 32s linear infinite;font:700 1.15rem "Bricolage Grotesque",sans-serif;color:var(--mute)}
+.mq span{margin:0 22px}.mq span:nth-child(3n){color:var(--rose)}
+@keyframes slide{to{transform:translateX(-50%)}}
+.card::after{content:"";position:absolute;inset:0;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),rgba(182,162,255,.16),transparent 70%);opacity:0;transition:opacity .25s;pointer-events:none}
+.card:hover::after{opacity:1}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.on{opacity:1;transform:none}
+@media(max-width:760px){.about{grid-template-columns:1fr}nav div{gap:14px;font-size:.85rem}nav b{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.name span,.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav><b>SS</b><div><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a></div></nav>
+
+<header class="hero">
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="orb o1" aria-hidden="true"></div><div class="orb o2" aria-hidden="true"></div>
+<div class="hero-in">
+<p class="hi">Hello, I'm</p>
+<h1 class="name" id="nm" aria-label="Sadiya Siddiqui">Sadiya Siddiqui</h1>
+<p class="role" id="role" aria-live="off"></p>
+<p class="lead">B.Tech CSE student (2027) who builds working web apps with Python, FastAPI and the MERN stack, and ships them live.</p>
+<div class="btns"><a class="btn main" href="#projects">See my projects</a><a class="btn" href="#contact">Get in touch</a></div>
+</div>
+</header>
+
+<div class="mq" aria-hidden="true"><div><span>Python</span><span>FastAPI</span><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>PostgreSQL</span><span>Plaid API</span><span>Docker</span><span>Git</span><span>Python</span><span>FastAPI</span><span>React</span><span>Node.js</span><span>Express</span><span>MongoDB</span><span>PostgreSQL</span><span>Plaid API</span><span>Docker</span><span>Git</span></div></div>
+
+<section id="about" class="rv">
+<h2>About me</h2>
+<div class="about">
+<div>
+<p>I'm a Computer Science undergraduate at Kunwar Satya Vira College of Engineering &amp; Management (AKTU, Lucknow), based in Bijnor, Uttar Pradesh.</p>
+<p>I like turning everyday problems into small, working products: a complaint tracker for citizens, a support platform for patients, a carbon footprint dashboard, and an AI finance manager. I'm strong in data structures, OOP, SQL and REST API design, and I'm currently learning FastAPI and machine learning basics. Open to remote and on-site roles.</p>
+</div>
+<div class="stats">
+<div class="stat"><b>8.0</b><span>CGPA at AKTU</span></div>
+<div class="stat"><b>5</b><span>Projects built</span></div>
+<div class="stat"><b>2</b><span>Forage simulations</span></div>
+<div class="stat"><b>2027</b><span>Graduating</span></div>
+</div>
+</div>
+</section>
+
+<section id="skills" class="rv">
+<h2>Skills</h2>
+<div class="skills">
+<div class="sk"><h3>Languages</h3><div class="chips"><i>Python</i><i>JavaScript (ES6+)</i><i>SQL</i></div></div>
+<div class="sk"><h3>Full stack</h3><div class="chips"><i>HTML5</i><i>CSS3</i><i>React.js</i><i>Node.js</i><i>Express.js</i><i>REST API</i></div></div>
+<div class="sk"><h3>Databases</h3><div class="chips"><i>PostgreSQL</i><i>MySQL</i><i>SQLite</i><i>MongoDB</i><i>Redis</i><i>DBMS</i></div></div>
+<div class="sk"><h3>DSA</h3><div class="chips"><i>Arrays</i><i>Strings</i><i>Hash Maps</i><i>Two Pointers</i><i>Sliding Window</i><i>Binary Search</i><i>Recursion</i></div></div>
+<div class="sk"><h3>Python OOP</h3><div class="chips"><i>Classes &amp; Objects</i><i>Inheritance</i><i>Polymorphism</i><i>Exception Handling</i></div></div>
+<div class="sk"><h3>Tools</h3><div class="chips"><i>Git</i><i>GitHub</i><i>Postman</i><i>VS Code</i><i>Docker</i><i>Render</i><i>Netlify</i></div></div>
+<div class="sk"><h3>AI &amp; backend</h3><div class="chips"><i>Plaid API</i><i>Groq LLM</i><i>SQLAlchemy</i><i>JWT / bcrypt</i><i>Celery</i><i>Prophet</i></div></div>
+<div class="sk"><h3>Learning now</h3><div class="chips"><i>FastAPI</i><i>Machine Learning basics</i></div></div>
+</div>
+</section>
+
+<section id="projects" class="rv">
+<h2>Projects</h2>
+<div class="projects">
+<article class="card wide"><span class="tag">Featured</span><h3>FinWise AI: Multi-Bank Personal Finance Manager</h3><p class="date">Live demo in progress</p>
+<p>A full-stack app that connects multiple bank accounts through Plaid into one dashboard, categorizes transactions with AI, and answers questions about your spending in plain English.</p>
+<ul><li>REST API in FastAPI + SQLAlchemy with JWT/bcrypt authentication, and a React 18 dashboard built with Vite, TailwindCSS and Recharts.</li><li>Plaid integration (Link, token exchange, transactions/sync) with a Celery + Redis job that syncs every 6 hours.</li><li>Transactions categorized by keyword rules plus a Groq LLM, and a chat assistant that answers over the last 90 days of data.</li><li>30-day spending forecast (Prophet), subscription detection, budget alerts at 80% and 100% of limit, and Redis caching for dashboard queries.</li><li>Dockerized, with the backend and PostgreSQL on Render and the frontend as a Render static site. Tested end to end on Plaid sandbox data across 3 mock institutions.</li></ul>
+<div class="chips"><i>React</i><i>FastAPI</i><i>PostgreSQL</i><i>Plaid API</i><i>Groq LLM</i><i>Celery</i><i>Redis</i><i>Docker</i></div><br><a class="live" href="https://github.com/sadiya-siddiqui/FinWise-AI-" target="_blank" rel="noopener">View on GitHub</a></article>
+
+<article class="card"><h3>Job Application Tracker</h3><p class="date">Oct 2026 – Present</p>
+<p>Track applications from Applied to Offer. Five FastAPI endpoints, SQLite with parameterized queries, and search by company, status and date. Deployed on Render.</p>
+<div class="chips"><i>Python</i><i>FastAPI</i><i>SQLite</i><i>REST API</i></div><span class="badge">In progress</span></article>
+
+<article class="card"><h3>CareConnect</h3><p class="date">Jul 2026 – Sep 2026</p>
+<p>A healthcare support platform where people submit requests, register as volunteers and get answers from an FAQ chatbot. Includes an admin dashboard with category analytics.</p>
+<div class="chips"><i>Node.js</i><i>Express</i><i>MongoDB</i><i>Mongoose</i></div><br><a class="live" href="https://careconnect-1-frontend.onrender.com" target="_blank" rel="noopener">Open live site</a> <a class="live" href="https://github.com/sadiya-siddiqui/careconnect" target="_blank" rel="noopener">View on GitHub</a></article>
+
+<article class="card"><h3>PCRM Complaint System</h3><p class="date">Nov 2025 – Jan 2026</p>
+<p>Citizens file complaints and get a unique Tracking ID. Admins manage statuses from Pending to Resolved on one dashboard. All endpoints tested in Postman.</p>
+<div class="chips"><i>Node.js</i><i>Express</i><i>MongoDB</i><i>Netlify</i></div><br><a class="live" href="https://p-crm-system.netlify.app/" target="_blank" rel="noopener">Open live site</a> <a class="live" href="https://github.com/sadiya-siddiqui/public-complaint-crm" target="_blank" rel="noopener">View on GitHub</a></article>
+
+<article class="card"><h3>EcoTrack</h3><p class="date">Jan 2025 – Feb 2025</p>
+<p>Calculates a CO₂ footprint across 6 activity categories with three Chart.js charts, streak tracking, goal bars and an animated canvas background.</p>
+<div class="chips"><i>HTML</i><i>CSS</i><i>JavaScript</i><i>Chart.js</i></div><br><a class="live" href="https://ss-carbon-tracker.netlify.app/" target="_blank" rel="noopener">Open live site</a></article>
+</div>
+</section>
+
+<section id="journey" class="rv">
+<h2>Journey</h2>
+<div class="tl">
+<div><span class="when">2023 – Present</span><h3>B.Tech, Computer Science</h3><p>Kunwar Satya Vira College of Engineering &amp; Management, AKTU, Lucknow. CGPA 8.0</p></div>
+<div><span class="when">2024</span><h3>Data Analytics Virtual Experience, Deloitte (Forage)</h3><p>Built interactive Excel KPI dashboards and shared structured insights with stakeholders.</p></div>
+<div><span class="when">2024</span><h3>GenAI Data Analytics Simulation, Tata Group (Forage)</h3><p>Used AI tools on financial datasets to flag risk indicators and recommend actions.</p></div>
+<div><span class="when">2025</span><h3>AI Agents Intensive, Kaggle × Google</h3><p>Also took part in Delhi Connect Summit 2.0 and the BirdCLEF 2026 bioacoustic classification challenge on Kaggle.</p></div>
+<div><span class="when">2023</span><h3>Senior Secondary (12th)</h3><p>Raheemia Public School, UP. 70%</p></div>
+</div>
+</section>
+
+<section id="contact" class="contact rv">
+<h2>Let's work together</h2>
+<p>Looking for an internship or a junior developer role? Send me a message and I'll reply soon.</p>
+<div class="links">
+<a class="btn main" href="mailto:siddiquisadiya874@gmail.com">siddiquisadiya874@gmail.com</a>
+<a class="btn" href="tel:+915007595031">+91 5007595031</a>
+<a class="btn" href="https://github.com/sadiya-siddiqui" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/sadiya-shekh-siddiqui/" target="_blank" rel="noopener">LinkedIn</a>
+</div>
+<p style="margin-top:26px">Bijnor, Uttar Pradesh, India</p>
+</section>
+
+<footer>© 2026 Sadiya Siddiqui</footer>
+
+<script>
+// Name letter reveal (the one orchestrated page-load moment)
+(function(){var n=document.getElementById('nm'),t=n.textContent,h='';
+for(var i=0;i<t.length;i++){h+=t[i]===' '?' ':'<span style="animation-delay:'+(i*55+150)+'ms">'+t[i]+'</span>'}
+n.innerHTML=h;n.setAttribute('aria-label',t);})();
+
+// Role typer
+(function(){var r=document.getElementById('role'),w=['Full-Stack Developer','Python & FastAPI builder','MERN stack developer','DSA problem solver'],i=0,j=0,d=false;
+if(matchMedia('(prefers-reduced-motion:reduce)').matches){r.textContent=w[0];return}
+function tick(){var s=w[i];j+=d?-1:1;r.textContent=s.slice(0,j);
+var delay=d?35:75;if(!d&&j===s.length){d=true;delay=1400}else if(d&&j===0){d=false;i=(i+1)%w.length;delay=300}
+setTimeout(tick,delay)}tick();})();
+
+// Constellation background that reacts to the pointer
+(function(){var c=document.getElementById('sky'),x=c.getContext('2d'),P=[],m={x:-999,y:-999},W,H,still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+function size(){W=c.width=c.offsetWidth;H=c.height=c.offsetHeight;P=[];var n=Math.min(70,Math.floor(W*H/16000));
+for(var i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35})}
+size();addEventListener('resize',size);
+c.parentNode.addEventListener('pointermove',function(e){var b=c.getBoundingClientRect();m.x=e.clientX-b.left;m.y=e.clientY-b.top});
+function draw(){x.clearRect(0,0,W,H);
+for(var i=0;i<P.length;i++){var p=P[i];if(!still){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1}
+for(var k=i+1;k<P.length;k++){var q=P[k],dx=p.x-q.x,dy=p.y-q.y,d=Math.sqrt(dx*dx+dy*dy);
+if(d<130){x.strokeStyle='rgba(182,162,255,'+(.22*(1-d/130))+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke()}}
+var dm=Math.hypot(p.x-m.x,p.y-m.y);
+if(dm<170){x.strokeStyle='rgba(255,122,162,'+(.6*(1-dm/170))+')';x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke()}
+x.fillStyle=dm<170?'#ff7aa2':'#b6a2ff';x.beginPath();x.arc(p.x,p.y,dm<170?2.6:1.8,0,6.283);x.fill()}
+if(!still)requestAnimationFrame(draw)}
+draw();})();
+
+// Scroll progress bar, card spotlight, stat count-up
+(function(){var b=document.getElementById('bar');
+addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-innerHeight;b.style.width=(h>0?scrollY/h*100:0)+'%'},{passive:true});
+document.querySelectorAll('.card').forEach(function(c){c.addEventListener('pointermove',function(e){var r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px')})});
+var still=matchMedia('(prefers-reduced-motion:reduce)').matches;
+document.querySelectorAll('.stat b').forEach(function(el){var raw=el.textContent,v=parseFloat(raw);if(still||isNaN(v)||v>1900)return;var dec=raw.indexOf('.')>-1?1:0;
+new IntersectionObserver(function(a,o){if(!a[0].isIntersecting)return;o.disconnect();var t0=performance.now();(function s(t){var p=Math.min((t-t0)/1200,1);el.textContent=(v*(1-Math.pow(1-p,3))).toFixed(dec);if(p<1)requestAnimationFrame(s)})(t0)}).observe(el)})})();
+
+// Section reveal on scroll
+(function(){var els=document.querySelectorAll('.rv');
+if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('on')});return}
+var o=new IntersectionObserver(function(a){a.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');o.unobserve(e.target)}})},{threshold:.12});
+els.forEach(function(e){o.observe(e)});})();
+</script>
+</body>
+</html>
